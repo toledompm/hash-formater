@@ -14,6 +14,7 @@ class hashGen{
     }
     formatHashes({before="",between=" => ",after="",quoteFirst=false, quoteSecond=false} = {}){
         const hashArray = [];
+
         if(quoteFirst) {
             before = before+"\"";
             between = "\""+between;
@@ -22,7 +23,6 @@ class hashGen{
             between = between+"\"";
             after = "\""+after;
         }
-
 
         this.keys.map(e => {
             hashArray.push(before+String(e)+between+String(this.object[e])+after);
