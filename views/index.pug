@@ -1,0 +1,18 @@
+extends layout
+
+block layout-content
+  div.View
+    h1.Banner Banner
+    div.Inputs
+      div.TextBoxes
+        form(action="/generate",method="post")
+          div.mainInputs
+            input.textInput(type="text", name="keys")
+            input.textInput(type="text", name="values")
+          div.advancedOptions
+            input(type="checkbox", name="quoteFirst")
+            input(type="checkbox", name="quoteLast")
+            input.textInput(type="text", name="before")
+            input.textInput(type="text", name="between")
+            input.textInput(type="text", name="after")
+          input(type="submit")

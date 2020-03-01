@@ -2,24 +2,25 @@ class hashGen{
     constructor (params){
         this.keys = params.keys;
         this.values = params.values;
-        this.object = this.__generateObjetct__();
+        this.object = this.__generateObjetct();
     }
 
-    __generateObjetct__(){
+    __generateObjetct(){
         const obj = {};
         this.keys.map((e,i) => {
             obj[e] = this.values[i];
         });
         return obj;
     }
+    
     formatHashes({before="",between=" => ",after="",quoteFirst=false, quoteSecond=false} = {}){
         const hashArray = [];
 
-        if(quoteFirst) {
+        if(quoteFirst!==false) {
             before = before+"\"";
             between = "\""+between;
         }
-        if(quoteSecond) {
+        if(quoteSecond!==false) {
             between = between+"\"";
             after = "\""+after;
         }
