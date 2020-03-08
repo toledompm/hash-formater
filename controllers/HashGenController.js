@@ -1,8 +1,8 @@
 const hg = require('../models/HashGen');
 const stream = require('stream');
 
-module.exports = {
-    setParams: (req,res,next) => {
+class Controller{
+    static setParams(req,res,next){
         const params = req.body;
         
         req.keys = params.keys;
@@ -15,9 +15,9 @@ module.exports = {
             after:params.after
         }
         next();
-    },
+    }
 
-    createHashGen: (req,res,next) => {
+    static createHashGen(req,res,next){
         req.keyArray = req.keys.split(',');
         req.valArray = req.values.split(',');
 
@@ -26,15 +26,15 @@ module.exports = {
             values:req.valArray
         });
         next();
-    },
+    }
 
-    formatOptions: (req,res,next) => {
+    static formatOptions(req,res,next){
         req.options = Object.keys(req.options)
             .filter(key => req.options[key] === "");
         next();
-    },
+    }
 
-    getHashes: (req,res) => {
+    static getHashes(req,res){
         const hashString = req.hashGen.formatHashes(req.options).join(', ');
         const hashBuffer = Buffer.from(
             hashString,
@@ -50,3 +50,10 @@ module.exports = {
     }
 
 }
+
+module.exports = [
+    Controller.setParams,
+    Controller.createHashGen,
+    Controller.formatOptions,
+    Controller.getHashes
+];
