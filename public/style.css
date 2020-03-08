@@ -101,7 +101,7 @@ a {
   border-bottom: var(--ui-shadow-border);
   box-shadow: var(--ui-shadow);
 }
-.novaDiv{
+.mainWrapper{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,44 +109,85 @@ a {
   height: 100%;
 }
 
-.Inputs {
+.inputsForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   background: white;
-  padding: 30px;
+  padding: 10px;
   border-bottom: var(--ui-shadow-border);
   box-shadow: var(--ui-shadow);
 }
 
-.Inputs > .textBoxes {
-  padding-bottom: 20px;
+.mainInputs {
   display: flex;
-  align-items: flex-end;
   flex-direction: column;
+  align-items: center;
+}
+
+.mainInputs > .textBoxes {
+  display: flex;
+  flex-direction: row;
+}
+
+.mainInputs > .hideDivButton {
+  margin-top: 20px;
+  display: flex;
+}
+
+.mainInputs > .hideDivButton > .button{
+  height: 30px;
+  width: 30px;
+}
+
+.advancedOptions {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.advancedOptions > .checkBoxes {
+  display: flex;
+  flex-direction: row;
+}
+
+.advancedOptions > .checkBoxes .checkBoxLabel{
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.advancedOptions > .textBoxes {
+  display: flex;
+  flex-direction: row;
 }
 
 .textInput {
   display: flex;
+  margin: 5px;
 }
 
-.NavButtons {
+.submitButton {
+  margin-top: 10px;
   display: flex;
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  padding: 0 20px;
+}
+
+.submitButton > .button {
+  height: 45px;
+  width: 180px;
 }
 
 .NavButton {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 55px;
-  width: 150px;
 
   background: var(--highlight);
 
