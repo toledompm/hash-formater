@@ -1,0 +1,19 @@
+extends layout
+
+block layout-content
+  div.View
+    h1.Banner Hash Generator
+    div.novaDiv
+      div.Inputs
+        form(action="/generate",method="post")
+          div.TextBoxes
+            div.mainInputs
+              input.textInput(type="text", name="keys")
+              input.textInput(type="text", name="values")
+            div.advancedOptions
+              input(type="checkbox", name="quoteFirst")
+              input(type="checkbox", name="quoteSecond")
+              input.textInput(type="text", name="before")
+              input.textInput(type="text", name="between")
+              input.textInput(type="text", name="after")
+          input(type="submit")  
