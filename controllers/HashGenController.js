@@ -29,11 +29,8 @@ module.exports = {
     },
 
     formatOptions: (req,res,next) => {
-        for (const option in req.options){
-            if(req.options[option] === ''){
-                delete req.options[option];
-            }
-        }
+        req.options = Object.keys(req.options)
+            .filter(key => req.options[key] === "");
         next();
     },
 
