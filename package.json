@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --harmony-private-methods ./server.js"
+    "dev": "nodemon --harmony-private-methods ./server.js",
+    "start":"node server.js"
   },
   "author": "",
   "license": "ISC",
