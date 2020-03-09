@@ -18,8 +18,8 @@ class Controller{
     }
 
     static createHashGen(req,res,next){
-        req.keyArray = req.keys.split(/\r?\n/);
-        req.valArray = req.values.split(/\r?\n/);
+        req.keyArray = req.keys.split(" ");
+        req.valArray = req.values.split(" ");
 
         req.hashGen = new hg({
             keys:req.keyArray,
