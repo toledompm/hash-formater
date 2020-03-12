@@ -7,6 +7,7 @@ class Controller{
         
         req.keys = params.keys;
         req.values = params.values;
+        req.file = params.file;
         req.options = {
             quoteFirst:params.quoteFirst,
             quoteSecond:params.quoteSecond,
