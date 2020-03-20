@@ -5,7 +5,7 @@ block layout-content
     h1.Banner Hash Generator
     div.mainWrapper
       div.inputsForm
-        form(action="/generate",method="post",id="mainForm")
+        form(action="/generate",method="POST",id="mainForm",enctype="multipart/form-data")
           div.mainInputs
             div.textBoxes
               input.textInput(type="text", name="keys", placeholder="chave1,chave2...")
