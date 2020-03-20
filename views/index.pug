@@ -5,7 +5,7 @@ block layout-content
     h1.Banner Hash Generator
     div.mainWrapper
       div.inputsForm
-        form(action="/generate",method="post",id="mainForm")
+        form(action="/generate",method="POST",id="mainForm",enctype="multipart/form-data")
           div.mainInputs
             div.textBoxes
               input.textInput(type="text", name="keys", placeholder="chave1,chave2...")
@@ -24,5 +24,7 @@ block layout-content
               input.textInput(type="text", name="before",placeholder="concatenar antes da chave")
               input.textInput(type="text", name="between",placeholder="concatenar no meio")
               input.textInput(type="text", name="after",placeholder="concatenar depois do valor")
+            div.fileInput 
+              input.fileInput(type="file", name="file")
         
   script(src="hideDiv.js")

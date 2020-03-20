@@ -4,16 +4,19 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --harmony-private-methods ./server.js",
-    "start":"node --harmony-private-methods ./server.js"
+    "start": "node --harmony-private-methods ./server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "fs": "0.0.1-security",
     "nodemon": "^2.0.2",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "xlsx": "^0.15.6",
+    "xlsx-stream-reader": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0"
