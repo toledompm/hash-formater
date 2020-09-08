@@ -23,7 +23,7 @@ class HashGen{
         }
         if(quoteSecond) {
             between = `${between}"`;
-            after = `${after}"`;
+            after = `"${after}`;
         }
 
         this.keyArray.map(e => {
