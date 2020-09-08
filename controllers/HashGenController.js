@@ -24,8 +24,8 @@ class Controller{
 
     static createHashGen(req,res,next){
         if(req.keys != "" && req.values != ""){
-            req.keyArray = req.keys.split(" ");
-            req.valArray = req.values.split(" ");
+            req.keyArray = req.keys.split(",");
+            req.valArray = req.values.split(",");
         }
         else{
             req.keyArray = [];
